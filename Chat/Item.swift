@@ -24,3 +24,10 @@ struct Item: Identifiable, Equatable {
         }
     }
 }
+
+extension Item: Speech {
+    
+    var speech: String {
+        return message
+    }
+}

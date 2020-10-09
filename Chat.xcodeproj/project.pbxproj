@@ -7,30 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85B94E9625309FD800B7809A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E9525309FD800B7809A /* ContentViewModel.swift */; };
+		85301CF025310F5600F218DC /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301CEF25310F5600F218DC /* Speaker.swift */; };
+		85925EE62530EE7800EC1BE5 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85925EE52530EE7800EC1BE5 /* Voice.swift */; };
+		85925EEB2530EEFD00EC1BE5 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85925EEA2530EEFD00EC1BE5 /* Speech.swift */; };
+		85925EEE2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85925EED2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift */; };
+		85B94E9625309FD800B7809A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E9525309FD800B7809A /* MainViewModel.swift */; };
 		85B94E992530AB0600B7809A /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E982530AB0600B7809A /* RowView.swift */; };
 		85B94E9D2530ACBC00B7809A /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E9C2530ACBC00B7809A /* FlipEffect.swift */; };
 		85B94EA22530D8F900B7809A /* BubleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EA12530D8F900B7809A /* BubleView.swift */; };
 		85B94EAC2530DD2000B7809A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EAB2530DD2000B7809A /* Item.swift */; };
 		85B94EB12530DD4700B7809A /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EB02530DD4700B7809A /* Kind.swift */; };
 		85B94EB62530DD7200B7809A /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EB52530DD7200B7809A /* Generator.swift */; };
+		85B94EBA2530E97900B7809A /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EB92530E97900B7809A /* SpeechSynthesizer.swift */; };
 		85EB974725309D1C004ADE6C /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB974625309D1C004ADE6C /* ChatApp.swift */; };
-		85EB974925309D1C004ADE6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB974825309D1C004ADE6C /* ContentView.swift */; };
+		85EB974925309D1C004ADE6C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB974825309D1C004ADE6C /* MainView.swift */; };
 		85EB974B25309D1D004ADE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EB974A25309D1D004ADE6C /* Assets.xcassets */; };
 		85EB974E25309D1D004ADE6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EB974D25309D1D004ADE6C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85B94E9525309FD800B7809A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		85301CEF25310F5600F218DC /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		85925EE52530EE7800EC1BE5 /* Voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
+		85925EEA2530EEFD00EC1BE5 /* Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		85925EED2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVSpeechSynthesisVoice.swift; sourceTree = "<group>"; };
+		85B94E9525309FD800B7809A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		85B94E982530AB0600B7809A /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		85B94E9C2530ACBC00B7809A /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
 		85B94EA12530D8F900B7809A /* BubleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubleView.swift; sourceTree = "<group>"; };
 		85B94EAB2530DD2000B7809A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		85B94EB02530DD4700B7809A /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
 		85B94EB52530DD7200B7809A /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		85B94EB92530E97900B7809A /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		85EB974325309D1C004ADE6C /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EB974625309D1C004ADE6C /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
-		85EB974825309D1C004ADE6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85EB974825309D1C004ADE6C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		85EB974A25309D1D004ADE6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85EB974D25309D1D004ADE6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85EB974F25309D1D004ADE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85301CF225310F6F00F218DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85925EED2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8531D02B2530F97A00773090 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				85B94E9525309FD800B7809A /* MainViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
 		85B94E8D25309D9B00B7809A /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,9 +102,10 @@
 		85B94E9025309DD200B7809A /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				85B94E9B2530ACA300B7809A /* Effects */,
 				85B94E9225309DE200B7809A /* Application */,
-				85B94E9325309DE800B7809A /* Scenes */,
+				85B94E9B2530ACA300B7809A /* Effects */,
+				8531D02B2530F97A00773090 /* View Models */,
+				85B94E9325309DE800B7809A /* Views */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -87,8 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				85B94EA92530DD1300B7809A /* Entities */,
+				85301CF225310F6F00F218DC /* Extensions */,
+				85B94EAF2530DD3E00B7809A /* Interfaces */,
 				85B94EB42530DD5C00B7809A /* Services */,
-				85B94EAF2530DD3E00B7809A /* Types */,
 			);
 			name = "Application Logic";
 			sourceTree = "<group>";
@@ -101,15 +129,14 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
-		85B94E9325309DE800B7809A /* Scenes */ = {
+		85B94E9325309DE800B7809A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85EB974825309D1C004ADE6C /* ContentView.swift */,
-				85B94E9525309FD800B7809A /* ContentViewModel.swift */,
-				85B94E982530AB0600B7809A /* RowView.swift */,
 				85B94EA12530D8F900B7809A /* BubleView.swift */,
+				85EB974825309D1C004ADE6C /* MainView.swift */,
+				85B94E982530AB0600B7809A /* RowView.swift */,
 			);
-			name = Scenes;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		85B94E9B2530ACA300B7809A /* Effects */ = {
@@ -124,22 +151,26 @@
 			isa = PBXGroup;
 			children = (
 				85B94EAB2530DD2000B7809A /* Item.swift */,
+				85B94EB02530DD4700B7809A /* Kind.swift */,
+				85925EE52530EE7800EC1BE5 /* Voice.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		85B94EAF2530DD3E00B7809A /* Types */ = {
+		85B94EAF2530DD3E00B7809A /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				85B94EB02530DD4700B7809A /* Kind.swift */,
+				85301CEF25310F5600F218DC /* Speaker.swift */,
+				85925EEA2530EEFD00EC1BE5 /* Speech.swift */,
 			);
-			name = Types;
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 		85B94EB42530DD5C00B7809A /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				85B94EB52530DD7200B7809A /* Generator.swift */,
+				85B94EB92530E97900B7809A /* SpeechSynthesizer.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -239,13 +270,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85EB974925309D1C004ADE6C /* ContentView.swift in Sources */,
+				85EB974925309D1C004ADE6C /* MainView.swift in Sources */,
 				85EB974725309D1C004ADE6C /* ChatApp.swift in Sources */,
-				85B94E9625309FD800B7809A /* ContentViewModel.swift in Sources */,
+				85925EE62530EE7800EC1BE5 /* Voice.swift in Sources */,
+				85B94E9625309FD800B7809A /* MainViewModel.swift in Sources */,
+				85925EEE2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift in Sources */,
 				85B94EB62530DD7200B7809A /* Generator.swift in Sources */,
+				85925EEB2530EEFD00EC1BE5 /* Speech.swift in Sources */,
 				85B94EB12530DD4700B7809A /* Kind.swift in Sources */,
 				85B94E992530AB0600B7809A /* RowView.swift in Sources */,
 				85B94EAC2530DD2000B7809A /* Item.swift in Sources */,
+				85B94EBA2530E97900B7809A /* SpeechSynthesizer.swift in Sources */,
+				85301CF025310F5600F218DC /* Speaker.swift in Sources */,
 				85B94EA22530D8F900B7809A /* BubleView.swift in Sources */,
 				85B94E9D2530ACBC00B7809A /* FlipEffect.swift in Sources */,
 			);

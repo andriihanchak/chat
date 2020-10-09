@@ -19,14 +19,8 @@ struct BubleView: View {
                 .padding(.all, 12)
                 .multilineTextAlignment(item.kind == .incoming ? .trailing : .leading)
                 .foregroundColor(.white)
-                .background(
-                    RoundedRectangle(cornerRadius: 16.0)
-                        .foregroundColor(item.kind == .incoming ? Color.secondary : Color.blue)
-                        .frame(minWidth: 100,
-                               maxWidth: .infinity,
-                               minHeight: 44.0,
-                               maxHeight: .infinity,
-                               alignment: item.kind == .incoming ? .trailing : .leading))
+                .background(item.kind == .incoming ? Color.secondary : Color.blue)
+                .cornerRadius(16.0)
             
             if item.kind == .incoming { image(for: item) }
         }

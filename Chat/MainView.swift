@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  Chat
 //
 //  Created by Andrii Hanchak on 09.10.2020.
@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     
-    @ObservedObject var viewModel = ContentViewModel()
+    @ObservedObject var viewModel: MainViewModel
     @State private var scaled: Bool = false
     
-    init() {
-        UITableView.appearance().separatorStyle = .none
-        UITableView.appearance().tableFooterView = .none
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
     }
     
     var body: some View {
@@ -44,7 +43,7 @@ struct ContentView: View {
     private func anchor(for item: Item) -> UnitPoint {
         return item.kind == .incoming ? .bottomTrailing : .bottomLeading
     }
-    
+
     private func scale(for item: Item) -> CGFloat {
         guard let index = viewModel.items.firstIndex(of: item), index == 0
         else { return 1.0 }
@@ -55,7 +54,9 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ContentView()
+        let viewModel = MainViewModel(speaker: SpeechSynthesizer(), generator: Generator())
+        
+        MainView(viewModel: viewModel)
             .previewLayout(.sizeThatFits)
     }
 }

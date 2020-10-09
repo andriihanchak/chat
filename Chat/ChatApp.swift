@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct ChatApp: App {
     
+    private var viewModel = MainViewModel(speaker: SpeechSynthesizer(), generator: Generator())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: viewModel)
         }
     }
 }

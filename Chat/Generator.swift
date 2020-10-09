@@ -30,12 +30,19 @@ final class Generator {
         "Shoulder pig cupim drumstick kielbasa capicola prosciutto ball tip, frankfurter beef tri-tip pork loin brisket salami. Turkey pork chop ham salami, sausage strip steak cupim swine fatback pork."
     ]
     
-    func generate(number: Int) -> Item {
+    private var number: Int = 0
+    
+    func generate() -> Item {
         let rawKind = Int.random(in: 0...1)
+        
         guard let kind = Kind(rawValue: rawKind)
         else { fatalError() }
+        
         let index = Int.random(in: 0..<messages.count)
         let message = "\(messages[index]) [\(number)]"
+        
+        number += 1
+        
         return Item(kind: kind, message: message)
     }
 }

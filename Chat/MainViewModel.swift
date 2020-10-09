@@ -32,11 +32,13 @@ final class MainViewModel: ObservableObject {
         let voice: Voice = item.kind == .incoming ? .male : .female
         
         items.insert(item, at: 0)
-        speaker.speak(speech: item, voice: voice)
-            .delay(for: 0.25, scheduler: DispatchQueue.main)
-            .subscribe(on: DispatchQueue.global())
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] (_) in self?.speek() }
-            .store(in: &cancellables)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.speaker.speak(speech: item, voice: voice)
+                .subscribe(on: DispatchQueue.global())
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] (_) in self?.speek() }
+                .store(in: &self.cancellables)
+        }
     }
 }

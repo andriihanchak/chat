@@ -19,20 +19,25 @@ struct ContentView: View {
     
     var body: some View {
         ScrollViewReader { scrollProxy in
-            List(0..<viewModel.items.count, id: \.self) {
-                let item = viewModel.items[$0]
-
-                RowView(item: item)
-                    .padding(.all, 8)
-                    .scaleEffect(scale(for: item), anchor: anchor(for: item))
-                    .modifier(FlipEffect())
-                    .onAppear(perform: { withAnimation(.default) { scaled = true } })
-            }.modifier(FlipEffect())
+            ScrollView {
+                LazyVStack {
+                    ForEach(0..<viewModel.items.count, id: \.self) {
+                        let item = viewModel.items[$0]
+                        
+                        RowView(item: item)
+                            .padding(.all, 8)
+                            .scaleEffect(scale(for: item), anchor: anchor(for: item))
+                            .modifier(FlipEffect())
+                            .onAppear(perform: { withAnimation(.default) { scaled = true } })
+                    }
+                }
+            }.padding(.all, 8)
+            .modifier(FlipEffect())
             .onReceive(viewModel.$items, perform: { id in
                 guard let id = id.last?.id else { return }
                 scaled = false
-                scrollProxy.scrollTo(id)
-            }).onAppear(perform: { viewModel.start(); })
+                scrollProxy.scrollTo(id) })
+            .onAppear(perform: { viewModel.start(); })
         }
     }
     

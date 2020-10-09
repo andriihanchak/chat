@@ -10,6 +10,10 @@
 		85B94E9625309FD800B7809A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E9525309FD800B7809A /* ContentViewModel.swift */; };
 		85B94E992530AB0600B7809A /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E982530AB0600B7809A /* RowView.swift */; };
 		85B94E9D2530ACBC00B7809A /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94E9C2530ACBC00B7809A /* FlipEffect.swift */; };
+		85B94EA22530D8F900B7809A /* BubleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EA12530D8F900B7809A /* BubleView.swift */; };
+		85B94EAC2530DD2000B7809A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EAB2530DD2000B7809A /* Item.swift */; };
+		85B94EB12530DD4700B7809A /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EB02530DD4700B7809A /* Kind.swift */; };
+		85B94EB62530DD7200B7809A /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B94EB52530DD7200B7809A /* Generator.swift */; };
 		85EB974725309D1C004ADE6C /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB974625309D1C004ADE6C /* ChatApp.swift */; };
 		85EB974925309D1C004ADE6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB974825309D1C004ADE6C /* ContentView.swift */; };
 		85EB974B25309D1D004ADE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EB974A25309D1D004ADE6C /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 		85B94E9525309FD800B7809A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		85B94E982530AB0600B7809A /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		85B94E9C2530ACBC00B7809A /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
+		85B94EA12530D8F900B7809A /* BubleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubleView.swift; sourceTree = "<group>"; };
+		85B94EAB2530DD2000B7809A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		85B94EB02530DD4700B7809A /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		85B94EB52530DD7200B7809A /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		85EB974325309D1C004ADE6C /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EB974625309D1C004ADE6C /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		85EB974825309D1C004ADE6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +86,9 @@
 		85B94E9125309DDC00B7809A /* Application Logic */ = {
 			isa = PBXGroup;
 			children = (
+				85B94EA92530DD1300B7809A /* Entities */,
+				85B94EB42530DD5C00B7809A /* Services */,
+				85B94EAF2530DD3E00B7809A /* Types */,
 			);
 			name = "Application Logic";
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 				85EB974825309D1C004ADE6C /* ContentView.swift */,
 				85B94E9525309FD800B7809A /* ContentViewModel.swift */,
 				85B94E982530AB0600B7809A /* RowView.swift */,
+				85B94EA12530D8F900B7809A /* BubleView.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -106,6 +118,30 @@
 				85B94E9C2530ACBC00B7809A /* FlipEffect.swift */,
 			);
 			name = Effects;
+			sourceTree = "<group>";
+		};
+		85B94EA92530DD1300B7809A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				85B94EAB2530DD2000B7809A /* Item.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		85B94EAF2530DD3E00B7809A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				85B94EB02530DD4700B7809A /* Kind.swift */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		85B94EB42530DD5C00B7809A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85B94EB52530DD7200B7809A /* Generator.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		85EB973A25309D1C004ADE6C = {
@@ -206,7 +242,11 @@
 				85EB974925309D1C004ADE6C /* ContentView.swift in Sources */,
 				85EB974725309D1C004ADE6C /* ChatApp.swift in Sources */,
 				85B94E9625309FD800B7809A /* ContentViewModel.swift in Sources */,
+				85B94EB62530DD7200B7809A /* Generator.swift in Sources */,
+				85B94EB12530DD4700B7809A /* Kind.swift in Sources */,
 				85B94E992530AB0600B7809A /* RowView.swift in Sources */,
+				85B94EAC2530DD2000B7809A /* Item.swift in Sources */,
+				85B94EA22530D8F900B7809A /* BubleView.swift in Sources */,
 				85B94E9D2530ACBC00B7809A /* FlipEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

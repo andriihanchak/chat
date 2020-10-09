@@ -7,24 +7,12 @@
 
 import Foundation
 
-enum Kind: Int {
-    
-    case incoming
-    case outgoing
-}
-
-struct Item: Identifiable {
-    
-    let id = UUID()
-    let kind: Kind
-    let message: String
-}
-
 class ContentViewModel: ObservableObject {
     
     @Published var items: [Item] = []
     
-    private var count: Int = 0
+    private let generator = Generator()
+    private var number: Int = 0
     private var timer: Timer?
     
     deinit {
@@ -35,18 +23,11 @@ class ContentViewModel: ObservableObject {
     }
     
     func start() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(elapsed(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(elapsed(_:)), userInfo: nil, repeats: true)
     }
     
     @objc func elapsed(_ timer: Timer) {
-        let rawKind = Int.random(in: 0...1)
-        guard let kind = Kind(rawValue: rawKind) else { return }
-        
-        let randomMessage = Int.random(in: 0..<100000000000)
-        let message = "\(count): \(randomMessage)"
-        let item = Item(kind: kind, message: String(message))
-        
-        items.insert(item, at: 0)
-        count += 1
+        items.insert(generator.generate(number: number), at: 0)
+        number += 1
     }
 }

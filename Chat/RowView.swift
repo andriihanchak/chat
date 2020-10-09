@@ -15,18 +15,7 @@ struct RowView: View {
         HStack(alignment: item.kind == .incoming ? .lastTextBaseline : .firstTextBaseline) {
             if item.kind == .incoming { Spacer() }
             
-            Text(item.message)
-                .padding(.all, 8)
-                .multilineTextAlignment(item.kind == .incoming ? .trailing : .leading)
-                .foregroundColor(.white)
-                .background(
-                    RoundedRectangle(cornerRadius: 22.0)
-                        .foregroundColor(item.kind == .incoming ? Color.secondary : Color.blue)
-                        .frame(minWidth: 100,
-                               maxWidth: .infinity,
-                               minHeight: 44.0,
-                               maxHeight: .infinity,
-                               alignment: item.kind == .incoming ? .trailing : .leading))
+            BubleView(item: item)
             
             if item.kind == .outgoing { Spacer() }
         }
@@ -34,7 +23,7 @@ struct RowView: View {
     }
 }
 
-struct RowView_Preview: PreviewProvider {
+struct RowView_Previews: PreviewProvider {
     
     static var previews: some View {
         let incoming = Item(kind: .incoming, message: "incoming")

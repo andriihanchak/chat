@@ -33,6 +33,7 @@ final class MainViewModel: ObservableObject {
         
         items.insert(item, at: 0)
         speaker.speak(speech: item, voice: voice)
+            .delay(for: 0.25, scheduler: DispatchQueue.main)
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .sink { [weak self] (_) in self?.speek() }

@@ -17,27 +17,27 @@ struct MainView: View {
     }
     
     var body: some View {
-        ScrollViewReader { scrollProxy in
             ScrollView {
                 LazyVStack {
-                    ForEach(0..<viewModel.items.count, id: \.self) {
-                        let item = viewModel.items[$0]
+                    ForEach(0..<viewModel.items.count, id: \.self) { index in
+                        let item = viewModel.items[index]
                         
                         RowView(item: item)
                             .padding(.all, 8)
                             .scaleEffect(scale(for: item), anchor: anchor(for: item))
                             .modifier(FlipEffect())
-                            .onAppear(perform: { withAnimation(.default) { scaled = true } })
                     }
                 }
             }.padding(.all, 8)
             .modifier(FlipEffect())
-            .onReceive(viewModel.$items, perform: { id in
-                guard let id = id.last?.id else { return }
-                scaled = false
-                scrollProxy.scrollTo(id) })
             .onAppear(perform: { viewModel.start(); })
-        }
+            .onReceive(viewModel.$items, perform: { id in
+                scaled = false
+                
+                DispatchQueue.main
+                    .asyncAfter(deadline: .now() + 0.15, execute: {
+                                    withAnimation(.spring()) { scaled = true } })
+            })
     }
     
     private func anchor(for item: Item) -> UnitPoint {
@@ -47,7 +47,7 @@ struct MainView: View {
     private func scale(for item: Item) -> CGFloat {
         guard let index = viewModel.items.firstIndex(of: item), index == 0
         else { return 1.0 }
-        return scaled ? 1.0 : 0.0
+        return scaled ? 1.0 : 0.000001
     }
 }
 

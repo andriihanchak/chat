@@ -57,38 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85301CF225310F6F00F218DC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				85925EED2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		8531D02B2530F97A00773090 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				85B94E9525309FD800B7809A /* MainViewModel.swift */,
-			);
-			name = "View Models";
-			sourceTree = "<group>";
-		};
-		85B94E8D25309D9B00B7809A /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				85B94E9125309DDC00B7809A /* Application Logic */,
-				85B94E9025309DD200B7809A /* User Interface */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		85B94E8E25309DA000B7809A /* Resource Files */ = {
+		85B94E8E25309DA000B7809A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				85EB974A25309D1D004ADE6C /* Assets.xcassets */,
 				85EB974D25309D1D004ADE6C /* Preview Assets.xcassets */,
 			);
-			name = "Resource Files";
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		85B94E8F25309DA600B7809A /* Supporting Files */ = {
@@ -99,80 +74,95 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		85B94E9025309DD200B7809A /* User Interface */ = {
+		85C5BB2F26B09D3A0003CF55 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				85B94E9225309DE200B7809A /* Application */,
-				85B94E9B2530ACA300B7809A /* Effects */,
-				8531D02B2530F97A00773090 /* View Models */,
-				85B94E9325309DE800B7809A /* Views */,
+				85C5BB3026B09D440003CF55 /* App */,
+				85C5BB3326B09D920003CF55 /* Effects */,
+				85C5BB3226B09D7A0003CF55 /* View Models */,
+				85C5BB3126B09D4A0003CF55 /* Views */,
 			);
-			name = "User Interface";
+			path = Application;
 			sourceTree = "<group>";
 		};
-		85B94E9125309DDC00B7809A /* Application Logic */ = {
-			isa = PBXGroup;
-			children = (
-				85B94EA92530DD1300B7809A /* Entities */,
-				85301CF225310F6F00F218DC /* Extensions */,
-				85B94EAF2530DD3E00B7809A /* Interfaces */,
-				85B94EB42530DD5C00B7809A /* Services */,
-			);
-			name = "Application Logic";
-			sourceTree = "<group>";
-		};
-		85B94E9225309DE200B7809A /* Application */ = {
+		85C5BB3026B09D440003CF55 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				85EB974625309D1C004ADE6C /* ChatApp.swift */,
 			);
-			name = Application;
+			path = App;
 			sourceTree = "<group>";
 		};
-		85B94E9325309DE800B7809A /* Views */ = {
+		85C5BB3126B09D4A0003CF55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				85B94EA12530D8F900B7809A /* BubleView.swift */,
 				85EB974825309D1C004ADE6C /* MainView.swift */,
 				85B94E982530AB0600B7809A /* RowView.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		85B94E9B2530ACA300B7809A /* Effects */ = {
+		85C5BB3226B09D7A0003CF55 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				85B94E9525309FD800B7809A /* MainViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		85C5BB3326B09D920003CF55 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
 				85B94E9C2530ACBC00B7809A /* FlipEffect.swift */,
 			);
-			name = Effects;
+			path = Effects;
 			sourceTree = "<group>";
 		};
-		85B94EA92530DD1300B7809A /* Entities */ = {
+		85C5BB3626B09DAE0003CF55 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				85C5BB3726B09DB10003CF55 /* Entities */,
+				85C5BB3826B09DBE0003CF55 /* Interfaces */,
+				85C5BB3926B09DD20003CF55 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		85C5BB3726B09DB10003CF55 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				85B94EAB2530DD2000B7809A /* Item.swift */,
 				85B94EB02530DD4700B7809A /* Kind.swift */,
 				85925EE52530EE7800EC1BE5 /* Voice.swift */,
 			);
-			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
-		85B94EAF2530DD3E00B7809A /* Interfaces */ = {
+		85C5BB3826B09DBE0003CF55 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
 				85301CEF25310F5600F218DC /* Speaker.swift */,
 				85925EEA2530EEFD00EC1BE5 /* Speech.swift */,
 			);
-			name = Interfaces;
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		85B94EB42530DD5C00B7809A /* Services */ = {
+		85C5BB3926B09DD20003CF55 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				85B94EB52530DD7200B7809A /* Generator.swift */,
 				85B94EB92530E97900B7809A /* SpeechSynthesizer.swift */,
 			);
-			name = Services;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		85C5BB3B26B09E740003CF55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85925EED2530EFB400EC1BE5 /* AVSpeechSynthesisVoice.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		85EB973A25309D1C004ADE6C = {
@@ -194,8 +184,10 @@
 		85EB974525309D1C004ADE6C /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				85B94E8E25309DA000B7809A /* Resource Files */,
-				85B94E8D25309D9B00B7809A /* Source Files */,
+				85C5BB2F26B09D3A0003CF55 /* Application */,
+				85C5BB3626B09DAE0003CF55 /* Data */,
+				85C5BB3B26B09E740003CF55 /* Extensions */,
+				85B94E8E25309DA000B7809A /* Resource */,
 				85B94E8F25309DA600B7809A /* Supporting Files */,
 			);
 			path = Chat;

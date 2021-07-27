@@ -10,5 +10,5 @@ import Foundation
 
 protocol Speaker {
     
-    func speak(speech: Speech, voice: Voice) -> Deferred<Future<Speech, Never>>
+    func speak(speech: Speech, voice: Voice) -> AnyPublisher<Speech, Never>
 }

@@ -19,7 +19,6 @@ struct RowView: View {
             
             if item.kind == .outgoing { Spacer() }
         }
-        
     }
 }
 

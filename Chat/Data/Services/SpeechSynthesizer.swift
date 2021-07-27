@@ -21,19 +21,16 @@ final class SpeechSynthesizer: NSObject, Speaker, AVSpeechSynthesizerDelegate {
         synthesizer.delegate = self
     }
 
-    func speak(speech: Speech, voice: Voice) -> Deferred<Future<Speech, Never>> {
-        return Deferred { [weak self] in
-            return Future { promise in
-                guard let self = self
-                else { return }
-                
+    func speak(speech: Speech, voice: Voice) -> AnyPublisher<Speech, Never> {
+        return Deferred {
+            return Future { [unowned self] promise in
                 let utterance = self.utterance(for: speech, using: voice)
                 let task = Task(completion: promise, speech: speech, utterance: utterance)
                 
                 self.synthesizer.speak(utterance)
                 self.tasks.append(task)
-            }
-        }
+            }.eraseToAnyPublisher()
+        }.eraseToAnyPublisher()
     }
     
     private func utterance(for speech: Speech, using voice: Voice) -> AVSpeechUtterance {
